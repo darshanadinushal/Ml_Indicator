@@ -17,7 +17,8 @@ AUTHOR_EMAIL = "darshanadinushal@gmail.com"
 HYPEN_E_DOT='-e .'
 def get_requirements(file_path:str)->List[str]:
     '''
-    this function will return the list of requirements
+    Reads the requirements.txt file and returns a list of dependencies.
+    Removes '-e .' if present.
     '''
     requirements=[]
     with open(file_path) as file_obj:
